@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#lista-elevi-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input[type='text'],
+input[type='number'] {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(85, 85, 85);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.hide {
+    display: none;
+}
+
+#note-elev-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#note-elev-wrapper h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#note-elev-wrapper table {
+    margin-top: 10px;
+}
+
+#note-elev-wrapper label {
+    margin-right: 10px;
+}
+
+#ascunde-note {
+    margin-bottom: 20px;
+    background-color: #dc3545;
+}
+
+#ascunde-note:hover {
+    background-color: #c82333;
+}
+
+.vezi-note {
+    background-color: green;
+}
+
+.sterge-elev {
+    background-color: red;
+}
+
+.sterge-nota {
+    background-color: red;
+}
+
+.center {
+    text-align: center;
+}
