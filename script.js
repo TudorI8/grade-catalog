@@ -30,6 +30,12 @@ inputNumeElev.addEventListener('keypress', function(e) {
 		adaugareElevInTabel();
 	}
 });
+document.querySelector('#sort-pupil-asc').addEventListener('click', function () {
+    sorteazaElevi('asc');
+});
+document.querySelector('#sort-pupil-desc').addEventListener('click', function () {
+    sorteazaElevi('desc');
+});
 tabelElevi.addEventListener('click', trateazaActiuniTabelElevi);
 tabelNote.addEventListener('click', trateazaActiuniTabeNote);
 butonAscundereNote.addEventListener('click', ascundeSectiuneNote);
@@ -38,6 +44,12 @@ inputNota.addEventListener('keypress', function(e) {
 	if (e.key === 'Enter') {
 		adaugaNotaInTabel();
 	}
+});
+document.querySelector('#sort-grade-asc').addEventListener('click', function () {
+    sorteazaNoteElev('asc');
+});
+document.querySelector('#sort-grade-desc').addEventListener('click', function () {
+    sorteazaNoteElev('desc');
 });
 
 function adaugareElevInTabel() {
@@ -65,6 +77,17 @@ function afisareTabel(elevi) {
          </tr>
       `;
 	}
+}
+
+function sorteazaElevi(order) {
+    elevi.sort(function (a, b) {
+        if (order === 'asc') {
+            return a.medie - b.medie;
+        } else {
+            return b.medie - a.medie;
+        }
+    });
+    afisareTabel(elevi);
 }
 
 function trateazaActiuniTabelElevi(e) {
@@ -139,4 +162,18 @@ function calculeazaMedie(note) {
     if (note.length === 0) return 0;
     const suma = note.reduce((total, nota) => total + nota, 0);
     return suma / note.length;
+}
+
+function sorteazaNoteElev(order) {
+    const idElev = tabelNote.querySelector('tbody').id;
+    const indexElev = idElev.split('_')[1];
+
+    elevi[indexElev].note.sort(function (a, b) {
+        if (order === 'asc') {
+            return a - b;
+        } else {
+            return b - a;
+        }
+    });
+    afiseazaNote(elevi[indexElev]);
 }
