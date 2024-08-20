@@ -122,6 +122,10 @@ function adaugaNotaInTabel() {
     const idElev = tabelNote.querySelector('tbody').id;
     const indexElev = idElev.split('_')[1];
 
+    if (!elevi[indexElev].note) { 
+        elevi[indexElev].note = []; 
+    }
+
     elevi[indexElev].note.push(nota);
     elevi[indexElev].medie = calculeazaMedie(elevi[indexElev].note);
 
