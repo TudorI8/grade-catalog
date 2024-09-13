@@ -37,19 +37,7 @@ This project implements a student grade catalog, where you can manage a list of 
       - The table contains a single column: `Grade`.
       - Two buttons should be added to sort the grades displayed on the screen: ascending and descending.
 
-## Getting Started
-
-### Prerequisites
-
-- A modern web browser (Chrome, Firefox, Edge, etc.)
-- Basic understanding of HTML, CSS, and JavaScript.
-
+   The above requirements are represented in the gifs below:
 ![Note ascunse](https://github.com/user-attachments/assets/ce0e5629-4540-42f3-96f3-9163eb4bdd1d)
 
 ![Note vizibile](https://github.com/user-attachments/assets/317f8761-0463-4fc0-afeb-3a82f02ce990)
-
-### How to Run the Project
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Courageuser/08-js-dom-Courageuser
