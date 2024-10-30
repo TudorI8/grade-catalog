@@ -10,7 +10,7 @@ body {
     padding: 20px;
 }
 
-#lista-elevi-wrapper {
+#student_list_wrapper {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -72,7 +72,7 @@ table th {
     display: none;
 }
 
-#note-elev-wrapper {
+#student_grades_wrapper {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -80,16 +80,16 @@ table th {
     margin-top: 20px;
 }
 
-#note-elev-wrapper h1 {
+#student_grades_wrapper h1 {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-#note-elev-wrapper table {
+#student_grades_wrapper table {
     margin-top: 10px;
 }
 
-#note-elev-wrapper label {
+#student_grades_wrapper label {
     margin-right: 10px;
 }
 

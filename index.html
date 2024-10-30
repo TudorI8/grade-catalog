@@ -4,52 +4,53 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Student catalog</title>
+    <link rel="shortcut icon" href="favico.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div id="lista-elevi-wrapper">
-        <h1>Lista elevi</h1>
+    <div id="student_list_wrapper">
+        <h1>📖 Student catalog</h1>
         <div>
-            <label for="nume-elev-input">Nume</label>
+            <label for="nume-elev-input">Name</label>
             <input type="text" id="nume-elev-input" />
-            <button id="adauga-elev-btn">Adauga</button>
+            <button id="adauga-elev-btn">Add</button>
         </div>
         <table id="tabel-elevi">
             <thead>
-                <th>Nume</th>
-                <th>Medie</th>
+                <th>Name</th>
+                <th>Avg. grade</th>
                 <th></th>
                 <th></th>
             </thead>
             <tbody></tbody>
         </table>
         <div class="sort-elevi">
-            <button id="sort-pupil-asc">Sortare ∧</button>
-            <button id="sort-pupil-desc">Sortare ∨</button>
+            <button id="sort-pupil-asc">Sort ∧</button>
+            <button id="sort-pupil-desc">Sort ∨</button>
         </div>
-        <div id="note-elev-wrapper" class="hide">
-            <button id="ascunde-note">Ascunde notele</button>
-            <h1>Numele elevului</h1>
+        <div id="student_grades_wrapper" class="hide">
+            <button id="ascunde-note">Hide grades</button>
+            <h1>Student's name</h1>
             <div>
                 <label for="nota"></label>
                 <input type="number" id="nota" />
-                <button id="adauga-nota-btn">Adauga</button>
+                <button id="adauga-nota-btn">Add</button>
                 <table id="tabel-note">
                     <thead>
-                        <th>Nota</th>
+                        <th>Grade</th>
                         <th></th>
                     </thead>
                     <tbody></tbody>
                 </table>
                 <div class="sort-note">
-                    <button id="sort-grade-asc">Sortare ∧</button>
-                    <button id="sort-grade-desc">Sortare ∨</button>
+                    <button id="sort-grade-asc">Sort ∧</button>
+                    <button id="sort-grade-desc">Sort ∨</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,14 +1,14 @@
 const elevi = [
-	{ nume: 'Andrei Popescu', note: [8, 7, 9], medie: (8 + 7 + 9) / 3 },
-	{ nume: 'Maria Ionescu', note: [10, 9, 10], medie: (10 + 9 + 10) / 3 },
-	{ nume: 'Alexandru Dumitrescu', note: [7, 8, 6], medie: (7 + 8 + 6) / 3 },
-	{ nume: 'Ioana Georgescu', note: [9, 8, 9], medie: (9 + 8 + 9) / 3 },
-	{ nume: 'Mihai Marinescu', note: [6, 7, 8], medie: (6 + 7 + 8) / 3 },
-	{ nume: 'Elena Vasilescu', note: [10, 10, 10], medie: (10 + 10 + 10) / 3 },
-	{ nume: 'Gabriel Petrescu', note: [7, 8, 7], medie: (7 + 8 + 7) / 3 },
-	{ nume: 'Ana Radu', note: [9, 9, 8], medie: (9 + 9 + 8) / 3 },
-	{ nume: 'Cristian Stan', note: [8, 7, 6], medie: (8 + 7 + 6) / 3 },
-	{ nume: 'Roxana Barbu', note: [10, 9, 8], medie: (10 + 9 + 8) / 3 },
+	{ nume: 'James Carter', note: [8, 7, 9], medie: (8 + 7 + 9) / 3 },
+	{ nume: 'Emily Thompson', note: [10, 9, 10], medie: (10 + 9 + 10) / 3 },
+	{ nume: 'Oliver Brooks', note: [7, 8, 6], medie: (7 + 8 + 6) / 3 },
+	{ nume: 'Sophia Richardson', note: [9, 8, 9], medie: (9 + 8 + 9) / 3 },
+	{ nume: 'Benjamin Cooper', note: [6, 7, 8], medie: (6 + 7 + 8) / 3 },
+	{ nume: 'Amelia Clark', note: [10, 10, 10], medie: (10 + 10 + 10) / 3 },
+	{ nume: 'Jack Bennett', note: [7, 8, 7], medie: (7 + 8 + 7) / 3 },
+	{ nume: 'Charlotte Foster', note: [9, 9, 8], medie: (9 + 9 + 8) / 3 },
+	{ nume: 'Henry Mitchell', note: [8, 7, 6], medie: (8 + 7 + 6) / 3 },
+	{ nume: 'Mia Turner', note: [10, 9, 8], medie: (10 + 9 + 8) / 3 },
 ];
 
 const inputNumeElev = document.getElementById('nume-elev-input');
@@ -16,9 +16,9 @@ const butonAdaugareElev = document.getElementById('adauga-elev-btn');
 const tabelElevi = document.getElementById('tabel-elevi');
 const tabelNote = document.getElementById('tabel-note');
 
-const sectiuneNote = document.getElementById('note-elev-wrapper');
+const sectiuneNote = document.getElementById('student_grades_wrapper');
 const butonAscundereNote = document.getElementById('ascunde-note');
-const containerNoteElev = document.getElementById('note-elev-wrapper');
+const containerNoteElev = document.getElementById('student_grades_wrapper');
 
 const inputNota = document.getElementById('nota');
 const butonAdaugareNota = document.getElementById('adauga-nota-btn');
@@ -59,7 +59,7 @@ function adaugareElevInTabel() {
 		afisareTabel(elevi);
 		inputNumeElev.value = '';
 	} else {
-		alert('Numele elevului trebuie sa contina minim 3 caractere');
+		alert("The student's name must contain at least 3 characters");
 	}
 }
 
@@ -72,7 +72,7 @@ function afisareTabel(elevi) {
          <tr id="elev_${i}">
             <td>${elevi[i].nume}</td>
             <td>${elevi[i].medie.toFixed(2)}</td>
-            <td class="center"><button class="vezi-note">Vezi Notele</button></td>
+            <td class="center"><button class="vezi-note">See grades</button></td>
             <td class="center"><button class="sterge-elev">X</button></td>
          </tr>
       `;
@@ -114,7 +114,10 @@ function trateazaActiuniTabeNote(e) {
 		const indexElev = idTableBody.split('_')[1];
 
 		elevi[indexElev].note.splice(indexNota, 1);
+		elevi[indexElev].medie = calculeazaMedie(elevi[indexElev].note);
+		
 		afiseazaNote(elevi[indexElev]);
+		afisareTabel(elevi);
 	}
 }
 
