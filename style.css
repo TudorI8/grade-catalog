@@ -32,9 +32,14 @@ input[type='text'],
 input[type='number'] {
     padding: 8px;
     margin-right: 10px;
-    border: 1px solid #ccc;
+    border: 1.5px solid #ccc;
     border-radius: 5px;
     width: 200px;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
 button {
@@ -47,13 +52,30 @@ button {
 }
 
 button:hover {
-    background-color: rgb(85, 85, 85);
+    background-color: #155fa0;
 }
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 10px;
     margin-top: 20px;
+}
+
+table th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table th:last-child {
+    border-top-right-radius: 10px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
 }
 
 table th,
@@ -99,20 +121,26 @@ table th {
 }
 
 #ascunde-note:hover {
-    background-color: #c82333;
+    background-color: #ba2433;
 }
 
 .vezi-note {
     background-color: green;
 }
 
-.sterge-elev {
-    background-color: red;
+.vezi-note:hover {
+    background-color: rgb(0, 94, 0);
 }
 
+.sterge-elev,
 .sterge-nota {
-    background-color: red;
+    background-color: #dc3545;
 }
+
+.sterge-elev:hover,
+.sterge-nota:hover {
+    background-color: red;
+}   
 
 .center {
     text-align: center;
